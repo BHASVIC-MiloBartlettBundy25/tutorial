@@ -26,6 +26,20 @@ public class MyWorld extends World
     private void prepare()
     {
         Player player = new Player();
-        addObject(player,373,305);
+        addObject(player, 340, 255);
+
+        Enemy enemy = new Enemy();
+        addObject(enemy, 50, 60);
+
+        Enemy enemy2 = new Enemy();
+        addObject(enemy2, 100, 600);
+
+        Enemy enemy3 = new Enemy();
+        addObject(enemy3, 200, 320);
+
+        enemy3.setLocation(102, 403);
+        enemy.setLocation(90, 236);
+        player.setLocation(104, 50);
+
     }
 }
