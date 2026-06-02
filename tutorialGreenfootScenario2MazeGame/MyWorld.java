@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    int time = 0;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -19,7 +19,13 @@ public class MyWorld extends World
         super(750, 600, 1); 
         prepare();
     }
-    
+    public void act()
+    {
+        time++;
+        if (time % 360 == 0){
+            addObject(new Enemy(),Greenfoot.getRandomNumber(750), Greenfoot.getRandomNumber(550));
+        }
+    }
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -170,5 +176,36 @@ public class MyWorld extends World
         wallHeightMedium8.setLocation(306,153);
         WallWidthSmall wallWidthSmall11 = new WallWidthSmall();
         addObject(wallWidthSmall11,337,74);
+        Mouse mouse = new Mouse();
+        addObject(mouse,46,560);
+        wallHeightLong5.setLocation(153,484);
+        wallHeightLong5.setLocation(152,372);
+        removeObject(wallHeightLong5);
+        wallWidthMedium2.setLocation(145,518);
+        removeObject(wallWidthMedium2);
+        wallHeightSmall2.setLocation(308,551);
+        removeObject(wallHeightSmall2);
+        wallWidthSmall3.setLocation(201,444);
+        removeObject(wallWidthSmall3);
+        WallWidthSmall wallWidthSmall3111 = new WallWidthSmall();
+        addObject(wallWidthSmall3111,188,385);
+        WallHeightMedium wallHeightMedium10 = new WallHeightMedium();
+        addObject(wallHeightMedium10,153,304);
+        wallHeightMedium10.setLocation(154,304);
+        WallWidthSmall wallWidthSmall12 = new WallWidthSmall();
+        addObject(wallWidthSmall12,40,521);
+        Cheese cheese = new Cheese();
+        addObject(cheese,106,35);
+        Teleporter teleporter = new Teleporter();
+        addObject(teleporter,120,110);
+        Teleporter teleporter2 = new Teleporter();
+        addObject(teleporter2,560,183);
+        
+        Enemy enemy = new Enemy();
+        addObject(enemy,Greenfoot.getRandomNumber(750),Greenfoot.getRandomNumber(550));
+        Enemy enemy2 = new Enemy();
+        addObject(enemy2,Greenfoot.getRandomNumber(750),Greenfoot.getRandomNumber(550));
+        Enemy enemy3 = new Enemy();
+        addObject(enemy3,Greenfoot.getRandomNumber(750),Greenfoot.getRandomNumber(550));
     }
 }
