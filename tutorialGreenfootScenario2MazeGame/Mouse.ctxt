@@ -17,4 +17,6 @@ comment7.params=
 comment7.target=boolean\ hitEnemy()
 comment8.params=
 comment8.target=void\ youLose()
-numComments=9
+comment9.params=
+comment9.target=void\ youWin()
+numComments=10

@@ -26,6 +26,7 @@ public class MyWorld extends World
             addObject(new Enemy(),Greenfoot.getRandomNumber(750), Greenfoot.getRandomNumber(550));
         }
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -200,12 +201,21 @@ public class MyWorld extends World
         addObject(teleporter,120,110);
         Teleporter teleporter2 = new Teleporter();
         addObject(teleporter2,560,183);
-        
+
         Enemy enemy = new Enemy();
         addObject(enemy,Greenfoot.getRandomNumber(750),Greenfoot.getRandomNumber(550));
         Enemy enemy2 = new Enemy();
         addObject(enemy2,Greenfoot.getRandomNumber(750),Greenfoot.getRandomNumber(550));
         Enemy enemy3 = new Enemy();
         addObject(enemy3,Greenfoot.getRandomNumber(750),Greenfoot.getRandomNumber(550));
+        enemy2 enemy22 = new enemy2();
+        addObject(enemy22,395,41);
+        enemy.setLocation(692,115);
+        enemy2 enemy23 = new enemy2();
+        addObject(enemy23,692,115);
+        enemy22.setLocation(265,253);
+        enemy.setLocation(701,119);
+        WinningPlatform winningPlatform = new WinningPlatform();
+        addObject(winningPlatform,711,19);
     }
 }

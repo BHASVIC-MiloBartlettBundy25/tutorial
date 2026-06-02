@@ -22,6 +22,7 @@ public class Mouse extends Actor
         moveAround();
         hitfood();
         hitTeleporter();
+        youWin();
         youLose();
     }
     public void moveAround()
@@ -81,7 +82,7 @@ public class Mouse extends Actor
     }
     public boolean hitEnemy()
     {
-        if (isTouching(Enemy.class))
+        if (isTouching(Enemy.class) || isTouching(enemy2.class))
         {
             return true;
         }
@@ -95,6 +96,14 @@ public class Mouse extends Actor
         if (hitEnemy())
         {
             getWorld().addObject(new YouLose(),375, 275);
+            Greenfoot.stop();
+        }
+    }
+    public void youWin()
+    {
+        if (isTouching(WinningPlatform.class))
+        {
+            getWorld().addObject(new YouWin(), 375, 275);
             Greenfoot.stop();
         }
     }
